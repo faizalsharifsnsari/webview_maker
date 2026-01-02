@@ -43,3 +43,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+# Generated Android splash resources
+android/app/src/main/res/drawable-night*/
+android/app/src/main/res/values-v31/
+android/app/src/main/res/values-night-v31/
+android/app/src/main/res/**/android12splash.png
+android/app/src/main/res/**/splash.png
+
+# Generated iOS launch images (if auto-generated)
+ios/Runner/Assets.xcassets/LaunchImage.imageset/
+ios/Runner/Assets.xcassets/LaunchBackground.imageset/

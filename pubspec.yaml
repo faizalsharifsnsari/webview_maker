@@ -42,13 +42,14 @@ dependencies:
   permission_handler: ^11.4.0
   rflutter_alert: ^2.0.7
   url_launcher: ^6.3.1
-  lottie: ^2.4.0
+  lottie: ^3.3.2
   flutter_launcher_icons: ^0.14.4
   flutter_inappwebview: ^6.1.5
   geolocator: ^10.1.0
   flutter_pdfview: ^1.4.3
   dio: ^5.9.0
   path_provider: ^2.1.5
+  flutter_native_splash: ^2.4.7
 
 
 dev_dependencies:
@@ -82,9 +83,18 @@ flutter:
 flutter_launcher_icons:
   android: true
   ios: true                           
-  image_path: "assets/images/logo.png"
+  image_path: "assets/images/portfolio_logo.jpg"
   adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "assets/images/logo.png"
+  adaptive_icon_foreground: "assets/images/portfolio_logo.jpg"
+
+
+flutter_native_splash:
+  color: "#0F172A"
+  image: assets/images/Portfolio.png
+
+  android_12:
+    color: "#0F172A"
+    image: assets/images/Portfolio.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

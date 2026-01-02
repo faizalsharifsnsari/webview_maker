@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:lottie/lottie.dart';
 import 'package:nexgeno_mcrm/Exitdialuge.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -278,6 +279,10 @@ class _WebViewStackState extends State<WebViewStack>
                   onLoadStop: (controller, url) async {
                     setState(() {
                       _isLoading = false;
+                    });
+                    await Future.delayed(Duration(seconds: 3));
+                    if (!mounted) return;
+                    setState(() {
                       _initialPageLoaded = true;
                     });
                     debugPrint("✅ Page finished loading: $url");
@@ -327,13 +332,27 @@ class _WebViewStackState extends State<WebViewStack>
 
               // 🌀 Splash / initial loader
               if (!_initialPageLoaded)
-                Container(
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/splash.jpg'),
-                      fit: BoxFit.cover,
+                Stack(
+                  children: [
+                    // Background image
+                    Container(
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/Portfolio.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                  ),
+
+                    // Lottie animation overlay
+                    Center(
+                      child: Lottie.asset(
+                        'assets/images/About Project.json',
+                        width: 200,
+                        height: 200,
+                      ),
+                    ),
+                  ],
                 ),
 
               // 📶 Top progress bar
