@@ -24,42 +24,81 @@ This project is suitable for **SaaS dashboards, admin panels, portfolios, and we
 
 ## 🛠️ Packages Used
 
-| Package | Version | Purpose |
-|------|--------|--------|
-| cupertino_icons | ^1.0.8 | iOS-style icons |
-| webview_flutter | ^4.10.0 | Core WebView |
-| webview_flutter_android | ^4.3.3 | Android WebView support |
-| flutter_inappwebview | ^6.1.5 | Advanced WebView features |
-| file_picker | ^9.0.2 | File selection |
-| flutter_pdfview | ^1.4.3 | PDF viewing |
-| connectivity_plus | ^6.1.3 | Internet connectivity |
-| provider | ^6.1.2 | State management |
-| permission_handler | ^11.4.0 | Runtime permissions |
-| geolocator | ^10.1.0 | Location services |
-| dio | ^5.9.0 | Network requests |
-| path_provider | ^2.1.5 | File system access |
-| url_launcher | ^6.3.1 | External URL handling |
-| lottie | ^3.3.2 | UI animations |
-| rflutter_alert | ^2.0.7 | Alert dialogs |
-| flutter_launcher_icons | ^0.14.4 | App icon generation |
-| flutter_native_splash | ^2.4.7 | Native splash screen |
+## 📦 Packages Used & Their Purpose
+
+| Package | Why it is used |
+|------|------|
+| **cupertino_icons** | Provides iOS-style icons so the app looks native and consistent on Apple devices. |
+| **webview_flutter** | Handles the core WebView functionality that loads and renders web content inside the Flutter app. |
+| **webview_flutter_android** | Adds Android-specific WebView support and ensures better compatibility and performance on Android devices. |
+| **flutter_inappwebview** | Used for advanced WebView control such as intercepting URLs, managing cookies, handling permissions, and injecting JavaScript. |
+| **file_picker** | Allows users to select files from their device, mainly for upload actions inside the WebView. |
+| **flutter_pdfview** | Enables smooth in-app PDF viewing instead of forcing users to open PDFs in external apps. |
+| **connectivity_plus** | Detects internet connection status and helps display a proper “No Internet” screen when the network is unavailable. |
+| **provider** | Manages app-level state in a clean and scalable way without over-engineering the architecture. |
+| **permission_handler** | Handles runtime permissions such as storage and location in a user-friendly and safe manner. |
+| **geolocator** | Fetches the user’s real-time location and injects it into the WebView when location access is required. |
+| **dio** | Used for secure and efficient network requests, especially for downloading authenticated files like PDFs. |
+| **path_provider** | Provides access to device directories for storing downloaded files temporarily or locally. |
+| **url_launcher** | Opens external links (such as phone calls, emails, or external websites) outside the WebView when required. |
+| **lottie** | Adds lightweight, smooth animations for splash screens and loading states to improve user experience. |
+| **rflutter_alert** | Displays clean and customizable alert dialogs for confirmations and error handling. |
+| **flutter_launcher_icons** | Generates consistent app icons for Android and iOS from a single source image. |
+| **flutter_native_splash** | Creates a native splash screen that appears instantly at app launch, avoiding blank white screens. |
+
 
 ---
 
 ## 📸 Screenshots
 
-![Splash Screen]()
-![WebView Screen](screenshots/webview.png)
-![No Internet](screenshots/no_internet.png)
-![File Upload](screenshots/file_upload.png)
+<p float="left">
+  <img src="Screenshots/1s.jpeg" width="220"/>
+  <img src="Screenshots/2s.jpeg" width="220"/>
+  <img src="Screenshots/3s.jpeg" width="220"/>
+  <img src="Screenshots/4s.jpeg" width="220"/>
+</p>
+
+
 
 ## ⚙️ Installation
 
  ### 1️⃣ Clone the repository
 
- ```bash
+ ```
 git clone https://github.com/faizalsharifsnsari/webview_maker.git
 cd webview_maker
+```
+ ### 2️⃣ Install dependencies
+
+ ```
+flutter pub get
+```
+
+ ###3️⃣ Generate splash screen & app icons (optional)
+ ```
+flutter pub run flutter_native_splash:create
+flutter pub run flutter_launcher_icons
+```
+### 4️⃣ Run the application
+
+```
+flutter run
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
